@@ -3,6 +3,7 @@ import { Routes, Router, ROUTER_DIRECTIVES } from '@angular/router';
 import { HTTP_PROVIDERS } from "@angular/http";
 import { LoginComponent } from "./login";
 import { FilesComponent } from "./files";
+import { AiAdalComponent } from "./ai-adal";
 import { AuthHelperService } from "./auth-helper.service";
 
 @Component({
@@ -15,7 +16,8 @@ import { AuthHelperService } from "./auth-helper.service";
 // Configure the routes for the app
 @Routes([
 	{ /*name: "Login",*/ component: LoginComponent, path: "/login" },
-	{ /*name: "Files",*/ component: FilesComponent, path: "/files" } 
+	{ /*name: "Files",*/ component: FilesComponent, path: "/files" },
+  { /*name: "Files",*/ component: AiAdalComponent, path: "/a" }  
 ])
 export class AiGraphAppComponent {
   public  title="";
@@ -31,6 +33,7 @@ export class AiGraphAppComponent {
 		else {
 			// access token doesn't exist, so the user needs to login
 		 	router.navigate(["/login"]);
+      // router.navigate(["/a"]);
 		}
 	}  
 }

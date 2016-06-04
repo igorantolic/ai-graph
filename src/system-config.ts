@@ -31,6 +31,7 @@ const barrels: string[] = [
   'app/shared',
   'app/files',
   'app/login',
+  'app/ai-adal',
   /** @cli-barrel */
 ];
 
